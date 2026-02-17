@@ -1,0 +1,745 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            background-color: #ffffff;
+            overflow-x: hidden;
+        }
+
+        #main {
+            display: flex;
+            border-bottom: 0.5px solid rgb(132, 122, 74);
+            height: 90px;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            background-color: #af9898b0;
+            margin: 0px;
+            position: fixed;
+            top: 0px;
+            backdrop-filter: blur(40px);
+            /* box-shadow: 3px 3px 5px 6px; */
+            /* border-bottom-left-radius: 15px; */
+            /* border-bottom-right-radius: 15px; */
+            z-index: 100;
+        }
+
+        #ul {
+            display: flex;
+            list-style: none;
+            vertical-align: middle;
+            position: relative;
+            top: 8px;
+        }
+
+        .li {
+            padding: 1.3em;
+            color: #fafdff;
+            font-size: 17px;
+            box-sizing: border-box;
+            margin: 0px;
+            font-weight: 500;
+        }
+
+        .li:hover {
+            border: 3px solid #df781f;
+            border-top: 0px;
+            border-left: 0px;
+            border-right: 0px;
+            /* border: inline; */
+
+
+            /* text-decoration: underline; */
+            transition: 0.8s ease;
+            transform: translate(-3px, -3px);
+            /* position: relative;
+            top: -3px;
+            right: -2px; */
+        }
+
+        #d1 {
+            width: 25%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #d2 {
+            width: 75%;
+            box-sizing: border-box;
+        }
+
+        #d3 {
+            width: 25%;
+            box-sizing: border-box;
+            display: flex;
+            align-items: left;
+            justify-content: center;
+        }
+
+        #btn1 {
+            background-color: #df781f;
+            color: white;
+            padding: 12px;
+            border: 0px;
+            border-radius: 20px;
+            width: 8.5em;
+        }
+
+        #h1 {
+            color: white;
+            font-size: 34px;
+        }
+
+        span {
+            color: #df781f;
+        }
+
+        #btn2 {
+            background-color: #0c1623;
+            color: white;
+            border: 0px;
+        }
+
+        #bt {
+            color: white;
+            border: 0px;
+            background-color: #021a38;
+        }
+
+        #drop {
+            height: 220px;
+            width: 200px;
+            /* border: 1px solid white; */
+            background-color: #021a38;
+            opacity: 1;
+            position: absolute;
+            left: -5px;
+            top: 68px;
+            border-radius: 0.4em;
+            display: none;
+        }
+
+        #drop ul {
+            color: white;
+            list-style: none;
+            padding: 10px;
+            margin-left: 19px;
+            margin-top: 0px;
+        }
+
+        #drop ul li {
+            padding: 7px;
+        }
+
+        #dp {
+            position: relative;
+        }
+
+        #dp:hover #drop {
+            display: block;
+        }
+
+        #div1 {
+            display: flex;
+            width: 50%;
+            flex-direction: column;
+            position: relative;
+            border: 1px solid white;
+            height: 600px;
+            align-items: center;
+            justify-content: space-between;
+            text-align: left;
+            box-sizing: border-box;
+            color: white;
+        }
+
+        #imgdiv {
+            width: 100%;
+            background-image: url("imgs/tempate2background.png");
+            height: 600px;
+            position: relative;
+            top: 0px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            vertical-align: middle;
+            align-items: center;
+            /* filter: brightness(60%); */
+            /* z-index: 99; */
+            /* margin-bottom: 300px; */
+        }
+
+        #imgdiv p1 {
+            /* display: block; */
+            font-family: "Nunito", sans-serif;
+            width: 700px;
+            font-size: 56px;
+            font-weight: 700;
+            color: white;
+            text-align: center;
+            /* font-family: "Nunito", sans-serif; */
+            margin-bottom: 30px;
+        }
+
+        #imgdiv p2 {
+            /* display: block; */
+            width: 735px;
+            font-size: 18px;
+            text-align: center;
+            color: white;
+            margin-bottom: 2rem;
+            margin-top: 30px;
+
+        }
+
+        #hr {
+            width: 80px;
+            height: 4px;
+            background-color: #df781f;
+            border: none;
+        }
+
+        #div2 {
+            width: 1140px;
+            height: 330px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+        #div2 #btn2 {
+            background-color: #df781f;
+            padding: 12px;
+            letter-spacing: 1px;
+            border-radius: 20px;
+            width: 8.5rem;
+            font-size: 15px;
+
+        }
+
+        #div2 #btn2:hover {
+            background-color: #2c2b2b;
+            color: #df781f;
+            transition: 1s;
+        }
+
+        #abth1 {
+            display: inline-block;
+            margin-bottom: 0px;
+            padding-left: 50px;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 1px;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+            font-family: "Nunito", sans-serif;
+            margin-top: 50px;
+        }
+
+        #abthr {
+            display: inline-block;
+            width: 120px;
+            position: relative;
+            top: 3px;
+            height: 1px;
+            background-color: #df781f;
+            border: none;
+        }
+
+        #abtp {
+            padding-left: 50px;
+            margin-top: 0px;
+            color: #2c2b2b;
+            opacity: 50%;
+            margin-bottom: 50px;
+        }
+
+        .anchor {
+            color: white;
+            text-decoration: none;
+        }
+
+        #abtimgdiv img {
+            height: 680px;
+            width: 510px;
+            border-radius: 20px;
+            margin-left: 50px;
+
+        }
+
+        #abtimgdiv {
+            position: relative;
+            width: 600px;
+
+        }
+
+        #prjdiv {
+            background-color: #df781f;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            vertical-align: middle;
+            position: absolute;
+            width: 120px;
+            height: 70px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+            top: 35px;
+            right: -15px;
+            padding: 15px;
+        }
+
+        #prjdiv h1 {
+            margin-bottom: 0px;
+            margin-top: 0px;
+            color: white;
+        }
+
+        #prjdiv p {
+            margin-top: 0px;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            color: white;
+        }
+
+        #experiencediv {
+            position: absolute;
+            bottom: 3px;
+            right: 360px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            vertical-align: middle;
+            height: 120px;
+            width: 150px;
+            border-radius: 10px;
+            background-color: white;
+        }
+
+        #experiencediv h1 {
+            color: #df781f;
+            margin: 0px;
+            font-size: 3.5rem;
+            font-weight: 700;
+            line-height: 1;
+        }
+
+        #experiencediv p {
+            width: 100px;
+            text-align: center;
+            margin: 0px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            text-transform: uppercase;
+        }
+
+        #abttextdiv {
+            margin-left: 50px;
+        }
+
+        #abttextdiv h1 {
+            font-weight: 700;
+            font-size: 3.5rem;
+            margin-top: 0px;
+            margin-bottom: 1.5rem
+        }
+
+        #abttextdiv p {
+            font-size: 1.25rem;
+            margin-bottom: 1.5rem;
+            margin-top: 0px;
+            font-weight: 300;
+            line-height: 30px;
+            width: 500px;
+        }
+
+        /* services section` */
+        #servsec {
+            width: 100%;
+            margin-right: 10px;
+            margin-left: 50px;
+            margin-bottom: 80px;
+        }
+
+        #servinto {
+            width: 45%;
+            /* margin-bottom: 40px; */
+        }
+
+        #servintro #servintroh1 {
+            font-size: 22px;
+            display: inline-block;
+            margin: 0px;
+        }
+
+        #servintro #servintrohr {
+            height: 1px;
+            width: 120px;
+            background-color: #df781f;
+            margin: 0px;
+            display: inline-block;
+            border: none;
+        }
+
+        #servintro #servintrop {
+            margin: 0px;
+            margin-top: 5px;
+            color: #2c2b2b80;
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 20px;
+        }
+
+        #servsec #servseccont {
+            width: 100%;
+            display: flex;
+            margin-left: 20px;
+        }
+
+        #servsec #servsecconttext {
+            width: 43%;
+            margin-top: 50px;
+            /* display: flex;
+            flex-direction: column; */
+        }
+
+        #servsec #servsecconttext h3 {
+            background-color: #df791f3f;
+            padding: 10px 20px;
+            margin: 0px;
+            width: fit-content;
+            border-radius: 5px;
+            font-size: 15px;
+            color: #df781f;
+        }
+
+        #servsec #servsecconttext h1 {
+            font-size: 42px;
+            font-weight: 300;
+            margin: 0px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #servsec #servsecconttext p {
+            margin: 0px;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        #servsec #servsecconttext button {
+            padding: 15px 25px;
+            background-color: #df781f;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            color: white;
+            font-weight: 400;
+            align-items: center;
+            /* padding-bottom: 10px; */
+        }
+
+        #servsec #servseccontimg {
+            width: 46%;
+            height: 400px;
+            margin-left: 20px;
+        }
+
+        #servsec #servseccontimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        #scrollsec {
+            /* display: flex; */
+            width: 90%;
+            margin-left: 60px;
+            margin-right: 40px;
+            overflow-x: scroll;
+            overflow-y: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+            gap: 40px;
+        }
+
+        .scrollsecdiv {
+            width: 300px;
+            height: 350px;
+            flex-shrink: 0;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            padding-left: 40px;
+            /* position: absolute; */
+        }
+
+        #logo1,
+        #logo2,
+        #logo3,
+        #logo4,
+        #logo5 {
+            font-size: 30px;
+            background-color: #df781f;
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: fit-content;
+            border-radius: 50%;
+            margin-top: 30px;
+        }
+
+        .scrollsech2 {
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .scrollsechr {
+            width: 80px;
+            background-color: #df781f;
+            border: none;
+            height: 1px;
+            margin: 0px;
+            display: inline-block;
+            margin-right: 10px;
+            margin-bottom: 5px;
+            border: none;
+        }
+
+        .scrollsecdiv:hover {
+            background-color: #df781f;
+            transition: 1s;
+
+
+        }
+
+        .scrollsecdiv:hover #logo1,
+        .scrollsecdiv:hover #logo2,
+        .scrollsecdiv:hover #logo3,
+        .scrollsecdiv:hover #logo4,
+        .scrollsecdiv:hover #logo5 {
+            background-color: #ffffff;
+            transition: 1s;
+            color: #df781f;
+
+        }
+
+        .scrollsecdiv:hover .scrollsechr {
+            background-color: white;
+            transition: 1s;
+        }
+
+        .scrollsecdiv:hover .scrollsecbutton {
+            display: block;
+        }
+
+        .scrollsecbutton {
+            background-color: white;
+            color: #df781f;
+            display: none;
+            padding: 5px 6px;
+            border-radius: 50%;
+            position: relative;
+            left: 240px;
+            bottom: 60px;
+            border: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <div id="d1">
+            <h1 id="h1">Strive<span>.</span></h1>
+        </div>
+        <div id="d2">
+            <ul id="ul">
+                <li class="li"><a href="#imgdiv" class="anchor">Home</a></li>
+                <li class="li"><a href="#aboutdiv" class="anchor">About</a></li>
+                <li class="li"><a class="anchor" href="#servsec">Services</a></li>
+                <li class="li"><a class="anchor">Portfolio</a></li>
+                <li class="li"><a class="anchor">Pricing</a></li>
+                <li class="li"><a class="anchor">Blog</a></li>
+
+                <li class="li" id="dp">Dropdown<i class="bi bi-chevron-down"></i>
+                    <div id="drop">
+                        <ul>
+                            <li>Drop drown 1</li>
+                            <li>Deep down <button id="bt"><i class="bi bi-chevron-down"></i></button></li>
+                            <li>Drop Drown 2</li>
+                            <li>Drop Drown 3</li>
+                            <li>Drop Drown 4</li>
+                            <li>Drop Drown 5</li>
+
+                        </ul>
+                    </div>
+                </li>
+
+                <li class="li">Contact</li>
+            </ul>
+        </div>
+        <div id="d3">
+            <button id="btn1">Get Started</button>
+        </div>
+    </div>
+    <div id="imgdiv">
+        <div id="div2">
+            <p1>Building Trust, Driving Growth</p1>
+            <hr id="hr">
+            <p2>Present your business with confidence using a clean, flexible, and fully responsive template that helps
+                you connect with clients, attract opportunities, and strengthen your brand identity.</p2>
+            <button id="btn2">Get Started</button>
+        </div>
+    </div>
+    <div id="aboutdiv" style="margin-bottom: 40px;">
+        <h1 id="abth1">About</h1>
+        <hr id="abthr">
+        <p id="abtp">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        <div style="display: flex;">
+            <div id="abtimgdiv">
+                <img src="https://bootstrapmade.com/content/demo/Strive/assets/img/about/about-portrait-2.webp">
+                <div id="prjdiv">
+                    <h1>345+</h1>
+                    <p>Projects</p>
+                </div>
+                <div id="experiencediv">
+                    <h1>12</h1>
+                    <p>years of experience</p>
+                </div>
+            </div>
+            <div id="abttextdiv">
+                <h1>Vestibulum Sagittis Lacinia Augue</h1>
+                <p>Nullam quis ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris
+                    sit amet nibh. Donec sodales sagittis magna. Sed consequat, leo eget bibendum sodales.</p>
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <div><i class="bi bi-rocket-takeoff"
+                            style="font-size: 40px; padding-right: 20px; color: #df781f; "></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.25rem; margin: 0px; margin-bottom: 10px; font-weight: 700;">Pellentesque
+                            Dapibus</h4>
+                        <p style="margin-bottom: 0px; color: #2c2b2bb3; font-size: 16px; width: 500px;">Aenean vulputate
+                            eleifend
+                            tellus. Aenean leo
+                            ligula, porttitor eu, consequat vitae, eleifend
+                            ac, enim.</p>
+                    </div>
+
+                </div>
+                <div style="display: flex; align-items: center; margin-bottom: 20px;">
+                    <div><i class="bi bi-globe" style="font-size: 40px; padding-right: 20px; color: #df781f; "></i>
+                    </div>
+                    <div>
+                        <h4 style="font-size: 1.25rem; margin: 0px; margin-bottom: 10px; font-weight: 700;">Suspendisse
+                            Pulvinar</h4>
+                        <p style="margin-bottom: 0px; color: #2c2b2bb3; font-size: 16px; width: 500px;">Maecenas tempus,
+                            tellus eget condimentum rhoncus, sem quam semper libero, sit amet adipiscing sem.</p>
+                    </div>
+
+                </div>
+                <div style="display: flex; align-items: center;margin-bottom: 10px;">
+                    <i class="bi bi-check-circle"
+                        style="font-size: 20px; margin: 0px;margin-right: 20px; color: #df781f; "></i>
+                    <p style="margin-bottom: 0px; color: #2c2b2bb3; font-size: 16px; width: 500px; ">
+                        Phasellus viverra
+                        nulla ut metus varius laoreet quisque rutrum aenean.</p>
+                </div>
+                <div style="display: flex; align-items: center;margin-bottom: 25px;">
+                    <i class="bi bi-check-circle"
+                        style="font-size: 20px; margin: 0px;margin-right: 20px; color: #df781f;"></i>
+                    <p style="margin-bottom: 0px; color: #2c2b2bb3; font-size: 16px; width: 500px;">Etiam ultricies nisi
+                        vel augue curabitur ullamcorper ultricies nisi nam.</p>
+                </div>
+                <button
+                    style="padding: 20px; width: 200px; background-color: #df781f; border: none;border-radius: 10px; font-size: 15px;color: white;letter-spacing: 2px;font-weight: 600; transition: 2s;"><a
+                        href="#imgdiv" style="text-decoration: none; color: white;">LEARN
+                        MORE</a></button>
+            </div>
+        </div>
+    </div>
+    <section id="servsec">
+        <div id="servintro">
+            <h1 id="servintroh1">SERVICES</h1>
+            <hr id="servintrohr">
+            <p id="servintrop">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+        </div>
+        <div id="servseccont">
+            <div id="servsecconttext">
+                <h3>PROFESSIONAL SERVICES</h3>
+                <h1>Elevating Business Performance Through Strategic Solutions</h1>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent varius risus sed pellentesque
+                    auctor. Phasellus gravida magna at tortor cursus, sit amet suscipit tortor malesuada.
+                </p>
+                <button>Request a Consultation</button>
+            </div>
+            <div id="servseccontimg">
+                <img src="https://bootstrapmade.com/content/demo/Strive/assets/img/services/services-9.webp">
+            </div>
+        </div>
+    </section>
+    <section id="scrollsec">
+        <div class="scrollsecdiv">
+            <i class="bi bi-bar-chart-fill" id="logo1"></i>
+            <button class="scrollsecbutton"><i class="bi bi-arrow-up-right" style="font-size: 20px;"></i></button>
+            <h2 class="scrollsech2">Financial Strategy Development</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus
+                varius, at finibus massa condimentum.
+            </p>
+            <hr class="scrollsechr">01
+        </div>
+        <div class="scrollsecdiv">
+            <i class="bi bi-graph-up-arrow" id="logo2"></i>
+            <button class="scrollsecbutton"><i class="bi bi-arrow-up-right" style="font-size: 20px;"></i></button>
+            <h2 class="scrollsech2">Market Expansion Advisory</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus
+                varius, at finibus massa condimentum.
+            </p>
+            <hr class="scrollsechr">02
+        </div>
+        <div class="scrollsecdiv">
+            <i class="bi bi-shield-check" id="logo3"></i>
+            <button class="scrollsecbutton"><i class="bi bi-arrow-up-right" style="font-size: 20px;"></i></button>
+            <h2 class="scrollsech2">Risk Management Solutions</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus
+                varius, at finibus massa condimentum.
+            </p>
+            <hr class="scrollsechr">03
+        </div>
+        <div class="scrollsecdiv">
+            <i class="bi bi-lightbulb" id="logo4"></i>
+            <button class="scrollsecbutton"><i class="bi bi-arrow-up-right" style="font-size: 20px;"></i></button>
+            <h2 class="scrollsech2">Innovation And Digital Transformation</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus
+                varius, at finibus massa condimentum.
+            </p>
+            <hr class="scrollsechr">04
+        </div>
+        <div class="scrollsecdiv">
+            <i class="bi bi-people-fill" id="logo5"></i>
+            <button class="scrollsecbutton"><i class="bi bi-arrow-up-right" style="font-size: 20px;"></i></button>
+            <h2 class="scrollsech2">Talent Management Strategy</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla facilisi. Cras vehicula magna eget lectus
+                varius, at finibus massa condimentum.
+            </p>
+            <hr class="scrollsechr">05
+        </div>
+    </section>
+</body>
+
+</html>
