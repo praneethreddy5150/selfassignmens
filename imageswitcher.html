@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img {
+            width: 200px;
+            height: 400px;
+        }
+
+        #div {
+            align-items: center;
+            position: absolute;
+            left: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <img src="./imgs/1000111077.jpg" alt="" id="img"><br>
+    <div id="div">
+        <button id="b1" onclick="next()">next</button>
+        <button id="b2" onclick="previous()">previous</button>
+    </div>
+    <script>
+        const images = [
+            "./imgs/1000111077.jpg",
+            "./imgs/1000111101.jpg",
+            "./imgs/1000111127.jpg",
+            "./imgs/1000111105.jpg"
+
+        ]
+        var i = 0
+        function next() {
+            i++
+            if (i >= images.length) {
+                i = 0
+            }
+            document.getElementById("img").src = images[i]
+        }
+
+        function previous() {
+            i--
+            if (i < 0) {
+                i = images.length - 1
+            }
+
+            document.getElementById("img").src = images[i]
+        }
+    </script>
+</body>
+
+</html>
