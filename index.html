@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Segoe UI", sans-serif;
+        }
+
+        body {
+            background: #0b0f1a;
+            color: #e4e7ff;
+            line-height: 1.6;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: #0b0f1a;
+            backdrop-filter: blur(10px);
+            padding: 15px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 100;
+        }
+
+        nav h1 {
+            color: #9aa4ff;
+            letter-spacing: 2px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #e4e7ff;
+            font-size: 15px;
+        }
+
+        nav a:hover {
+            color: #9aa4ff;
+            transition: 0.3s;
+
+        }
+
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            padding: 120px 8% 60px;
+            gap: 50px;
+            flex-wrap: wrap;
+        }
+
+        .hero-text {
+            flex: 1;
+        }
+
+        .hero-text h2 {
+            font-size: 2.8rem;
+        }
+
+        .hero-text span {
+            color: #9aa4ff;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+            max-width: 500px;
+            color: #e4e7ff;
+        }
+
+        .hero-visual {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            vertical-align: middle;
+        }
+
+        #heroimg {
+            height: 280px;
+            width: 280px;
+            border-radius: 50%;
+            position: relative;
+            left: 50px;
+        }
+
+        section {
+            padding: 80px 8%;
+        }
+
+        section h2 {
+            text-align: center;
+            font-size: 2.2rem;
+            margin-bottom: 40px;
+        }
+
+        section h2 span {
+            color: #9aa4ff;
+        }
+
+        .about {
+            max-width: 900px;
+            margin: auto;
+            text-align: center;
+            color: #e4e7ff;
+        }
+
+        .skills {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 25px;
+        }
+
+        .skill-box {
+            background: #12182b;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .skill-box:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 20px rgba(0, 229, 255, 0.6);
+        }
+
+        .contact {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            background: #12182b;
+            border: none;
+            border-radius: 10px;
+            color: #e4e7ff;
+        }
+
+        button.submit {
+            background: #9aa4ff;
+            border: none;
+            padding: 12px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        @media(max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+
+            .hero-text h2 {
+                font-size: 2.2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <h1>Portfolio</h1>
+        <ul>
+            <li><a href="#herohome">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero" id="herohome">
+        <div class="hero-text">
+            <h2>Hi, I'm <span>Praneeth Vinay</span></h2>
+            <p>CSE Student | Web Developer |Computer Science student focused on modern web development, JavaScript, and
+                building practical, real-world applications </p>
+        </div>
+        <div class="hero-visual">
+            <div> <img src="imgs/mine5.jpeg" alt="" id="heroimg"></div>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>About <span>Me</span></h2>
+        <p class="about">
+            Passionate Computer Science student focused on web technologies, problem-solving,
+            and building scalable, user-friendly applications.
+        </p>
+    </section>
+
+    <section id="skills">
+        <h2>My <span>Skills</span></h2>
+        <div class="skills">
+            <div class="skill-box">HTML / CSS</div>
+            <div class="skill-box">JavaScript</div>
+            <div class="skill-box">SQL / MongoDB</div>
+            <div class="skill-box">Android Programming</div>
+
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact <span>Me</span></h2>
+        <div class="contact">
+            <input type="text" placeholder="Your Name">
+            <input type="email" placeholder="Your Email">
+            <textarea rows="4" placeholder="Message"></textarea>
+            <button class="submit">Send Message</button>
+        </div>
+    </section>
+</body>
+
+</html>

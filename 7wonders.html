@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            transition: all 0.4s ease;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            /* background: linear-gradient(to right, #783169, #522b6c, #572b75);
+             */
+            background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0px;
+            margin-left: 20px;
+            margin-right: 20px;
+        }
+
+        #header {
+            text-align: center;
+            font-size: 42px;
+            /* color: rgb(0, 221, 255); */
+            color: #FFD700;
+        }
+
+        h1 {
+            text-align: center;
+            /* color: #ffcc70; */
+        }
+
+        .detailcard {
+            gap: 25px;
+            margin: 40px 0;
+            /* background: rgba(255, 255, 255, 0.08); */
+            background: rgba(255, 255, 255, 0.08);
+            padding: 25px;
+            border-radius: 15px;
+            backdrop-filter: blur(8px);
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+        }
+
+        .detailcard img {
+            margin-right: 30px;
+            max-width: 500px;
+            height: 300px;
+            width: 500px;
+            margin-top: 20px;
+            object-fit: cover;
+            border-radius: 15px;
+            float: left;
+        }
+
+        .detailcard img:hover {
+            transform: scale(1.05);
+            transition: 1s;
+        }
+
+        .detailcard:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            transform: translateY(-8px);
+            transition: 0.4s;
+        }
+
+        .detailcard p {
+            font-size: 18px;
+            /* color: white; */
+            color: #f1f1f1;
+            word-spacing: 2px;
+            line-height: 1.6;
+            margin-top: 20px;
+        }
+
+        .wonder h1 {
+            font-size: 30px;
+            color: #ffcc70;
+        }
+
+        @media(max-width:768px) {
+            .detailcard {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .detailcard p {
+                width: 100%;
+                text-align: center;
+            }
+
+            .detailcard img {
+                width: 100%;
+                margin-right: 0px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            body {
+                margin-left: 10px;
+                margin-right: 10px;
+            }
+
+            .detailcard img:hover {
+                transform: scale(1.05);
+                transition: 1s;
+            }
+
+            .detailcard:hover {
+                box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+                transform: translateY(-8px);
+                transition: 0.4s;
+            }
+        }
+
+        footer {
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="header">7 Wonders Of The World</h1>
+    <div>
+        <div class="wonder">
+            <h1>Great Wall of China</h1>
+            <div class="detailcard">
+                <img
+                    src="https://imgs.search.brave.com/EEPgfagCRBNgYlpqaE6K1ebrb0ygvcm_QqPqPJc1Djc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvNTQ0/ODI2MzI0L3Bob3Rv/L2dyZWF0LXdhbGwt/aW4tdGhlLXRodW5k/ZXJzdG9ybS13ZWF0/aGVyLWNoaW5hLmpw/Zz9zPTYxMng2MTIm/dz0wJms9MjAmYz1V/YklrR0ZHenczVTNG/NTVLMzFMSmFrVkoy/bFZtVlJJR1JDSWpD/RjhxaFlrPQ">
+                <p>The Great Wall of China is one of the most remarkable architectural achievements in human history,
+                    built primarily to protect Chinese states and empires from invasions by northern nomadic tribes.
+                    Construction of the wall began as early as the 7th century BC, but it was first unified and expanded
+                    under Emperor Qin Shi Huang around 221 BC after he united China. Over the centuries, several
+                    dynasties continued building and strengthening it, with the most well-preserved sections constructed
+                    during the Ming Dynasty (1368–1644). The wall stretches approximately 21,196 kilometers, making it
+                    the longest man-made structure in the world. Beyond military defense, it also helped regulate trade
+                    and transportation along the famous Silk Road. Although many believe it is visible from space, this
+                    is largely a myth. Due to its immense historical and cultural importance, the Great Wall was
+                    designated a UNESCO World Heritage Site in 1987 and remains one of the New Seven Wonders of the
+                    World.</p>
+            </div>
+        </div>
+        <div class="wonder">
+            <h1>Petra</h1>
+            <div class="detailcard">
+                <img
+                    src="https://imgs.search.brave.com/WChPLi9gmL2HAh_tVaB-Z3H4yaRm1082M-A7A4WctzQ/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTA3/NzIyOTM5Ni9waG90/by90aGUtbW9uYXN0/ZXJ5LW9mLXBldHJh/LWF0LXRoZS1zdW5z/ZXQuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPWNDUHkwWW1l/OUFGcFgxYzk4R19P/UXljTHFTbkphMXly/LU5qZVBOZ1BvUnc9">
+                <p>Petra, located in southern Jordan, is an ancient city famous for its rock-cut architecture and
+                    advanced water management system, and it is one of the New Seven Wonders of the World. It was
+                    established as early as the 4th century BC by the Nabataeans, an Arab tribe who made Petra their
+                    capital and transformed it into a major trading hub connecting Arabia, Egypt, and the Mediterranean
+                    regions. The Nabataeans became wealthy by controlling important trade routes for spices, silk, and
+                    incense, and they carved magnificent structures directly into the red sandstone cliffs, which is why
+                    Petra is often called the “Rose City.” One of its most iconic monuments is Al-Khazneh (The
+                    Treasury), along with other impressive structures like Ad Deir (The Monastery), the Royal Tombs, and
+                    an ancient Roman-style theater. In 106 AD, Petra was annexed by the Roman Empire, which further
+                    developed the city, but over time, changes in trade routes and several powerful earthquakes led to
+                    its decline and eventual abandonment. Petra remained largely unknown to the Western world until it
+                    was rediscovered in 1812 by Swiss explorer Johann Ludwig Burckhardt. Today, it is a UNESCO World
+                    Heritage Site (since 1985) and stands as a symbol of Jordan’s rich history and architectural
+                    brilliance.</p>
+            </div>
+        </div>
+        <div class="wonder">
+            <h1>Christ the Redeemer</h1>
+            <div class="detailcard">
+                <img
+                    src="https://imgs.search.brave.com/kdRugYgbDa6Ta3Nj9FKslyyWTzZuTazn_MPAp3KrNDs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9vbmx5/YnlsYW5kLmNvbS93/cC1jb250ZW50L3Vw/bG9hZHMvMjAyMC8w/OS9jaHJpc3RyZWRl/ZW1lcjE2LmpwZw">
+                <p>Christ the Redeemer is a world-famous statue of Jesus Christ located at the summit of Mount Corcovado
+                    in Rio de Janeiro, Brazil, and it is one of the New Seven Wonders of the World. The idea for the
+                    statue was first proposed in the mid-19th century, but the project officially began in the 1920s as
+                    a symbol of Christianity and peace in Brazil. Construction started in 1922 and was completed in
+                    1931, with the statue being designed by Brazilian engineer Heitor da Silva Costa and sculpted by
+                    French artist Paul Landowski, while the face was created by Romanian sculptor Gheorghe Leonida. The
+                    monument stands approximately 30 meters (98 feet) tall, with arms stretching 28 meters (92 feet)
+                    wide, and it sits on an 8-meter pedestal, making its total height about 38 meters. It is made of
+                    reinforced concrete and covered with thousands of small triangular soapstone tiles, which were
+                    chosen for their durability and smooth finish. The statue represents Jesus with open arms,
+                    symbolizing peace, protection, and welcome to the people of Brazil and visitors from around the
+                    world. In 2007, it was officially named one of the New Seven Wonders of the World, and in 2012 it
+                    was added to the list of UNESCO World Heritage Sites as part of Rio de Janeiro’s cultural landscape,
+                    remaining one of the most recognized landmarks globally.</p>
+            </div>
+        </div>
+        <div class="wonder">
+            <h1>Machu Picchu</h1>
+            <div class="detailcard">
+                <img
+                    src="https://imgs.search.brave.com/fsSo9XhwLvydCEpVY7Vd7EA-0HW33LkdEintrshQYFE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5pc3RvY2twaG90/by5jb20vaWQvMTc0/OTE2NTMxL3Bob3Rv/L21hY2h1LXBpY2No/dTEuanBnP3M9NjEy/eDYxMiZ3PTAmaz0y/MCZjPVJTSXhRdDFo/bGFfcEdBY1dqcUYw/amIwNHk3dml2NWpo/V1l3N1lsWV9FeTg9">
+                <p>Machu Picchu is an ancient Incan city located high in the Andes Mountains of Peru, near the city of
+                    Cusco, and it is one of the New Seven Wonders of the World. It was built in the 15th century during
+                    the reign of the Inca emperor Pachacuti and is believed to have served as a royal estate, religious
+                    site, or ceremonial center for the Inca civilization. Constructed around 1450 AD, Machu Picchu
+                    showcases the Incas’ advanced engineering skills, with precisely cut stone structures built without
+                    mortar, agricultural terraces carved into steep mountain slopes, and a sophisticated water drainage
+                    system. The city includes important structures such as the Temple of the Sun, the Intihuatana stone
+                    (a ritual stone associated with astronomy), and the Room of the Three Windows. Machu Picchu was
+                    abandoned in the 16th century, likely due to the Spanish conquest, although the Spanish never
+                    discovered the site. It remained largely unknown to the outside world until it was brought to
+                    international attention in 1911 by American historian and explorer Hiram Bingham. Today, Machu
+                    Picchu is a UNESCO World Heritage Site (since 1983) and a symbol of the architectural brilliance and
+                    cultural richness of the Inca Empire, attracting millions of visitors from around the world each
+                    year.</p>
+            </div>
+        </div>
+        <div class="wonder">
+            <h1>Chichén Itzá</h1>
+            <div class="detailcard">
+                <img
+                    src="https://imgs.search.brave.com/v1oeIfJcuu2DiGFynIVxAqgK2Q8NBT7NrMrsdelGLRs/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly93d3cu/dGVycmVzZGVzYW5k/ZXMub3JnL2ltYWdl/cy9jaGljaGVuLWl0/emEtMy5qcGc">
+                <p>Chichén Itzá is an ancient Mayan city located in the Yucatán Peninsula of Mexico and is one of the
+                    New Seven Wonders of the World. It was founded around the 6th century AD and became one of the most
+                    powerful and influential cities of the Maya civilization between the 9th and 12th centuries. The
+                    city served as a major political, economic, and religious center, showcasing the advanced knowledge
+                    of the Maya in astronomy, mathematics, and architecture. Its most famous structure is the Temple of
+                    Kukulcán (El Castillo), a massive step pyramid dedicated to the feathered serpent god Kukulcán,
+                    which is designed with precise astronomical alignment—during the spring and autumn equinoxes,
+                    sunlight creates a shadow that resembles a serpent descending the pyramid’s steps. Other significant
+                    structures include the Great Ball Court, one of the largest in Mesoamerica, the Temple of the
+                    Warriors, and the Sacred Cenote, a natural sinkhole used for religious ceremonies and offerings.
+                    Chichén Itzá shows evidence of both Mayan and Toltec cultural influences, indicating strong trade
+                    and cultural connections. The city began to decline in the 13th century for reasons that are still
+                    debated by historians, including political conflict and environmental factors. Today, it is a UNESCO
+                    World Heritage Site (since 1988) and remains one of the most important and visited archaeological
+                    sites in Mexico.</p>
+            </div>
+        </div>
+        <div class="wonder">
+            <h1>Colosseum</h1>
+            <div class="detailcard">
+                <img
+                    src="https://imgs.search.brave.com/psWWW6kNe4Fe6XLHhm4H29Ue9efrt04F4kTu-LzbuXc/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wbHVz/LnVuc3BsYXNoLmNv/bS9wcmVtaXVtX3Bo/b3RvLTE2NjE5NDE5/NzQwODItMGJkYjUz/NWQ2M2Q4P2ZtPWpw/ZyZxPTYwJnc9MzAw/MCZpeGxpYj1yYi00/LjEuMCZpeGlkPU0z/d3hNakEzZkRCOE1I/eHpaV0Z5WTJoOE1U/TjhmSEp2YldGdUpU/SXdZMjlzYjNOelpY/VnRmR1Z1ZkRCOGZE/QjhmSHd3">
+                <p>The Colosseum, also known as the Flavian Amphitheatre, is an ancient Roman arena located in the
+                    center of Rome, Italy, and it is one of the New Seven Wonders of the World. Construction began in
+                    70–72 AD under Emperor Vespasian of the Flavian dynasty and was completed in 80 AD by his son Titus,
+                    with later modifications made by Emperor Domitian. Built primarily from limestone, concrete, and
+                    volcanic stone, the Colosseum could hold an estimated 50,000 to 80,000 spectators, making it the
+                    largest amphitheater ever constructed in the Roman Empire. It was used for public spectacles such as
+                    gladiator contests, animal hunts (venationes), mock naval battles, executions, and dramatic
+                    performances, serving both as entertainment and as a demonstration of Roman power and engineering
+                    brilliance. The structure features a complex system of vaults, corridors, and underground chambers
+                    known as the hypogeum, where animals and gladiators were kept before contests. Over the centuries,
+                    the Colosseum suffered damage from earthquakes, stone robbers, and neglect, especially after the
+                    fall of the Western Roman Empire, but it remains a powerful symbol of ancient Rome. In 1980, it was
+                    designated a UNESCO World Heritage Site, and today it stands as one of the most visited historical
+                    monuments in the world, representing the grandeur and cultural legacy of the Roman civilization.</p>
+            </div>
+        </div>
+        <div class="wonder">
+            <h1>Taj Mahal</h1>
+            <div class="detailcard">
+                <img
+                    src="https://imgs.search.brave.com/YJFqdNGfTfqrA90JbK9gwWMjmnsi0_CdThjHtRGBYG4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90My5m/dGNkbi5uZXQvanBn/LzAxLzk1Lzc0LzM2/LzM2MF9GXzE5NTc0/MzY4NF9sbFhCQ3Bi/cGZKWVdKSW4ydnl5/SGxDeHVVbnE3YW9j/Qi5qcGc">
+                <p>The Taj Mahal is a magnificent white marble mausoleum located in Agra, India, on the banks of the
+                    Yamuna River, and it is one of the New Seven Wonders of the World. It was commissioned in 1632 by
+                    the Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal, who died during childbirth
+                    in 1631, and construction was completed around 1653, taking approximately 20 years and involving
+                    thousands of artisans and craftsmen from across Asia. Designed in a blend of Mughal, Persian,
+                    Islamic, and Indian architectural styles, the monument is renowned for its perfect symmetry,
+                    intricate carvings, calligraphy, and the use of precious and semi-precious stones in a technique
+                    known as pietra dura. The central dome rises about 73 meters (240 feet) high and is surrounded by
+                    four slender minarets, while the entire complex includes a mosque, a guest house, and beautifully
+                    landscaped Mughal gardens arranged in a charbagh (four-part) layout. Built primarily from white
+                    marble brought from Rajasthan, the Taj Mahal changes color slightly depending on the time of day and
+                    lighting conditions, adding to its beauty. It was designated a UNESCO World Heritage Site in 1983
+                    and remains a powerful symbol of eternal love, as well as one of the most visited and admired
+                    architectural masterpieces in the world.</p>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>© 2026 7 Wonders Project | Created by Praneeth</p>
+    </footer </body>
+
+</html>
